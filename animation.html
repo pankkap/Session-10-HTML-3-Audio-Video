@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+
+        *{padding: 0;margin: 0;box-sizing: border-box;}
+        .conatiner
+        {
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* background-color: deeppink; */
+            /* Linear-Gradiant */
+            /* background-image: url('https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-position: center;
+            background-size: cover; */
+            background-image: linear-gradient(to right top, yellow , blue, deeppink, green);
+        }
+        p
+        {
+            color: white;
+            text-transform: uppercase;
+            margin-top: 10px;
+           /* font-family: 'Ephesis', cursive; */
+           font-family: Arial, Helvetica, sans-serif;
+           font-weight: bolder;
+           animation: popup 1s linear infinite;
+        }
+        .box
+        {
+            width: 100px;
+            height: 100px;
+            border: 10px solid rgba(255, 255, 255, 0.388);
+            border-top: 10px solid white;
+            border-radius: 50%;
+            animation: loader 2s linear infinite;
+        }
+        @keyframes loader {
+            0%
+            {
+                transform: rotate(0deg);
+            }
+            
+            100%
+            {
+                transform: rotate(360deg);
+            }
+
+        }
+        @keyframes popup {
+            0%{
+                opacity: 1;
+            }
+           
+            100%
+            {
+                opacity:0;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="conatiner">
+        <div class="box"></div>
+        <p>loading</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #col-1
+        {
+            height: 100px;
+        }
+
+        #nestedTable tr td
+        {
+            border-collapse: collapse;
+            border: 1px dashed red;
+        }
+        #nestedTable
+        {
+            width: 100%;
+            height: 100%;
+        }
+        #nestedTable1 tr td
+        {
+            border-collapse: collapse;
+            border: 1px dashed green;
+        }
+        #nestedTable1
+        {
+            width: 100%;
+            height: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr><td colspan="2" id="col-1">
+            <table border="1" id="nestedTable">
+                <tr><td colspan="2" align="center">Nested Table</td></tr>
+                <tr><td>col-3</td><td>col-4</td></tr>
+            </table>   
+        </td>
+        <td>
+            <table border="1" id="nestedTable1">
+                <tr><td colspan="2" align="center">Nested Table</td></tr>
+                <tr><td>col-3</td><td>col-4</td></tr>
+            </table>  
+        </td></tr>
+        <tr><td>Column-21</td><td>Column-22</td><td>Column-23</td></tr>
+    </table>
+</body>
+</html>

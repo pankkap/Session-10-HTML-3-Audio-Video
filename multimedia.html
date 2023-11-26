@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0;margin: 0;box-sizing: border-box;}
+        .container
+        {
+            display: flex;
+        }
+        #my-video
+        {
+            width: 300px;
+            height: 200px;
+            border: 10px solid gold;
+            border-radius: 50%;
+            background-color: gold;
+        }
+        .left
+        {
+            border: 2px solid red;
+            width: 50%;
+        }
+        .right
+        {
+            border: 2px solid green;
+            width: 50%;
+            height: 359px;
+        }
+        .website-container
+        {
+            width: 100%;
+            height: 100vh;
+            border: 5px solid yellow;
+        }
+        .website-container iframe
+        {
+                width: inherit;
+                height: inherit;
+        }
+        #pdf-viewer
+        {
+            width: 100%;
+            height: 500px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <audio autoplay loop controls muted >
+                <source src="./Downloads/Fairy1.mp3" />    
+                <source src="./Downloads/Fairy21.mp3" />    
+                <source src="./Downloads/Fairy3.mp3" />    
+            </audio>
+            <br/>
+            <!-- <video controls width="300" height="200" muted autoplay loop id="my-video"> -->
+            <video controls autoplay loop width="300" height="200" id="my-video">
+                <source src="./Downloads/Dance-1.mp4" />
+                <source src="./Downloads/Dance-2.mp4"/>
+            </video>
+            <br>
+            <button id="V-on">Video-On</button>
+            <button id="V-off">Video-Off</button>
+        </div>
+        <div class="right">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/IP7EntQ2lSA?si=OUmw-RsqP1tudDdg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    <!-- html5 multimedia tags -->
+    <!-- <audio src="./Downloads/Fairy1.mp3" controls autoplay loop hidden> </audio> -->
+    <div class="website-container">
+        <iframe src="https://www.beta-labs.in/" frameborder="0"></iframe>
+    </div>
+    <iframe id="pdf-viewer" src="./Downloads/Table of Content.pdf" frameborder="0"></iframe>
+    <script>
+
+        let btn1 = document.getElementById('V-on')
+        let btn2 = document.getElementById('V-off')
+        let video = document.getElementById('my-video')
+        btn1.onclick = function(){
+            video.play()
+        }
+        btn2.onclick = function(){
+            video.pause()
+        }
+    </script>
+</body>
+</html>
